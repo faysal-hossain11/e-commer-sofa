@@ -1,101 +1,282 @@
 import Image from "next/image";
+import Link from "next/link";
+import DsliveryVan from '@/app/assets/images/icons/delivery-van.svg';
+import MoneyBack from '@/app/assets/images/icons/money-back.svg';
+import ServiceHours from '@/app/assets/images/icons/service-hours.svg';
+import Catetory1 from '@/app/assets/images/category/category-1.jpg';
+import Catetory2 from '@/app/assets/images/category/category-2.jpg';
+import Catetory3 from '@/app/assets/images/category/category-3.jpg';
+import Catetory4 from '@/app/assets/images/category/category-4.jpg';
+import Catetory5 from '@/app/assets/images/category/category-5.jpg';
+import Catetory6 from '@/app/assets/images/category/category-6.jpg';
+import Product1 from '@/app/assets/images/products/product1.jpg';
+import Product2 from '@/app/assets/images/products/product2.jpg';
+import Product3 from '@/app/assets/images/products/product3.jpg';
+import Product4 from '@/app/assets/images/products/product4.jpg';
 
+import { FaRegHeart } from "react-icons/fa";
+import { FaRegEye } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="bg-cover bg-no-repeat bg-center py-36 bg-[url('assets/images/banner-bg.jpg')]" >
+        <div className="container mx-auto">
+          <h1 className="text-6xl text-gray-800 font-medium mb-4 capitalize">
+            best collection for <br /> home decoration
+          </h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam <br />
+            accusantium perspiciatis, sapiente
+            magni eos dolorum ex quos dolores odio</p>
+          <div className="mt-12">
+            <Link href="#" className="bg-primary text-white px-8 py-4 
+                    rounded hover:bg-black font-semibold transition-all duration-300 ">Shop Now</Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+
+      {/* start the features card  */}
+      <div className="container mx-auto py-16">
+        <div className="w-10/12 grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto justify-center">
+          <div className="border border-primary rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+            <Image src={DsliveryVan} alt="Delivery" className="w-12 h-12 object-contain" />
+            <div>
+              <h4 className="font-medium capitalize text-lg">Free Shipping</h4>
+              <p className="text-gray-500 text-sm">Order over $200</p>
+            </div>
+          </div>
+          <div className="border border-primary rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+            <Image src={MoneyBack} alt="Delivery" className="w-12 h-12 object-contain" />
+            <div>
+              <h4 className="font-medium capitalize text-lg">Money Rturns</h4>
+              <p className="text-gray-500 text-sm">30 days money returs</p>
+            </div>
+          </div>
+          <div className="border border-primary rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+            <Image src={ServiceHours} alt="Delivery" className="w-12 h-12 object-contain" />
+            <div>
+              <h4 className="font-medium capitalize text-lg">24/7 Support</h4>
+              <p className="text-gray-500 text-sm">Customer support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* end the features card  */}
+
+      {/* start the category card */}
+      <div className="container mx-auto py-16">
+        <h2 className="text-3xl text-gray-800 uppercase mb-6 font-semibold">shop by category</h2>
+        <div className="grid grid-cols-3 gap-3">
+          <div className="relative rounded-sm overflow-hidden group">
+            <Image src={Catetory1} alt="category 1" className="w-full" />
+            <Link href="#"
+              className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-60 transition">Bedroom</Link>
+          </div>
+          <div className="relative rounded-sm overflow-hidden group">
+            <Image src={Catetory2} alt="category 1" className="w-full" />
+            <Link href="#"
+              className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-60 transition">Mattrass</Link>
+          </div>
+          <div className="relative rounded-sm overflow-hidden group">
+            <Image src={Catetory3} alt="category 1" className="w-full" />
+            <Link href="#"
+              className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-60 transition">Outdoor
+            </Link>
+          </div>
+          <div className="relative rounded-sm overflow-hidden group">
+            <Image src={Catetory4} alt="category 1" className="w-full" />
+            <Link href="#"
+              className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-60 transition">Sofa</Link>
+          </div>
+          <div className="relative rounded-sm overflow-hidden group">
+            <Image src={Catetory5} alt="category 1" className="w-full" />
+            <Link href="#"
+              className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-60 transition">Living
+              Room</Link>
+          </div>
+          <div className="relative rounded-sm overflow-hidden group">
+            <Image src={Catetory6} alt="category 1" className="w-full" />
+            <Link href="#"
+              className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-60 transition">Kitchen</Link>
+          </div>
+        </div>
+      </div>
+      {/* end the category card */}
+
+      {/* start the new arrival card */}
+      <div className="container mx-auto pb-16">
+        <h2 className="text-3xl text-gray-800 uppercase mb-6 font-semibold">top new arrival</h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="bg-white shadow rounded overflow-hidden group">
+            <div className="relative">
+              <Image src={Product1} alt="product 1" className="w-full" />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
+                    justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                <Link href="#"
+                  className="text-white text-lg w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="view product">
+                  <FaRegEye />
+                </Link>
+
+              </div>
+            </div>
+            <div className="pt-4 pb-3 px-4">
+              <Link href="#">
+                <h4 className="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">Guyer Chair</h4>
+              </Link>
+              <div className="flex items-baseline mb-1 space-x-2">
+                <p className="text-xl text-primary font-semibold">$45.00</p>
+                <p className="text-sm text-gray-400 line-through">$55.90</p>
+              </div>
+              <div className="flex items-center">
+                <div className="flex gap-1 text-sm text-yellow-400">
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                </div>
+                <div className="text-xs text-gray-500 ml-3">(150)</div>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <Link href="#"
+                className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition-all duration-300"><FaCartShopping /> Add to cart</Link>
+
+              <Link href="#"
+                className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition-all duration-300"
+                title="add to wishlist">
+                  Wishlist
+               <FaRegHeart />
+              </Link>
+            </div>
+          </div>
+          <div className="bg-white shadow rounded overflow-hidden group">
+            <div className="relative">
+              <Image src={Product4} alt="product 1" className="w-full" />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
+                    justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                <Link href="#"
+                  className="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="view product">
+                  <i className="fa-solid fa-magnifying-glass"></i>
+                </Link>
+                <Link href="#"
+                  className="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="add to wishlist">
+                  <i className="fa-solid fa-heart"></i>
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4 pb-3 px-4">
+              <Link href="#">
+                <h4 className="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">Bed
+                  King Size</h4>
+              </Link>
+              <div className="flex items-baseline mb-1 space-x-2">
+                <p className="text-xl text-primary font-semibold">$45.00</p>
+                <p className="text-sm text-gray-400 line-through">$55.90</p>
+              </div>
+              <div className="flex items-center">
+                <div className="flex gap-1 text-sm text-yellow-400">
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                </div>
+                <div className="text-xs text-gray-500 ml-3">(150)</div>
+              </div>
+            </div>
+            <Link href="#"
+              className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+              to cart</Link>
+          </div>
+          <div className="bg-white shadow rounded overflow-hidden group">
+            <div className="relative">
+              <Image src={Product2} alt="product 1" className="w-full" />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
+                    justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                <Link href="#"
+                  className="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="view product">
+                  <i className="fa-solid fa-magnifying-glass"></i>
+                </Link>
+                <Link href="#"
+                  className="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="add to wishlist">
+                  <i className="fa-solid fa-heart"></i>
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4 pb-3 px-4">
+              <Link href="#">
+                <h4 className="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                  Couple Sofa</h4>
+              </Link>
+              <div className="flex items-baseline mb-1 space-x-2">
+                <p className="text-xl text-primary font-semibold">$45.00</p>
+                <p className="text-sm text-gray-400 line-through">$55.90</p>
+              </div>
+              <div className="flex items-center">
+                <div className="flex gap-1 text-sm text-yellow-400">
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                </div>
+                <div className="text-xs text-gray-500 ml-3">(150)</div>
+              </div>
+            </div>
+            <Link href="#"
+              className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+              to cart</Link>
+          </div>
+          <div className="bg-white shadow rounded overflow-hidden group">
+            <div className="relative">
+              <Image src={Product3} alt="product 1" className="w-full" />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
+                    justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                <Link href="#"
+                  className="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="view product">
+                  <i className="fa-solid fa-magnifying-glass"></i>
+                </Link>
+                <Link href="#"
+                  className="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                  title="add to wishlist">
+                  <i className="fa-solid fa-heart"></i>
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4 pb-3 px-4">
+              <Link href="#">
+                <h4 className="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                  Mattrass X</h4>
+              </Link>
+              <div className="flex items-baseline mb-1 space-x-2">
+                <p className="text-xl text-primary font-semibold">$45.00</p>
+                <p className="text-sm text-gray-400 line-through">$55.90</p>
+              </div>
+              <div className="flex items-center">
+                <div className="flex gap-1 text-sm text-yellow-400">
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                  <span><i className="fa-solid fa-star"></i></span>
+                </div>
+                <div className="text-xs text-gray-500 ml-3">(150)</div>
+              </div>
+            </div>
+            <Link href="#"
+              className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+              to cart</Link>
+          </div>
+        </div>
+      </div>
+      {/* end the new arrival card */}
+    </>
   );
 }
