@@ -32,7 +32,7 @@ const loginPage = () => {
                                 className="text-primary focus:ring-0 rounded-sm cursor-pointer" />
                             <label for="remember" className="text-gray-600 ml-3 cursor-pointer">Remember me</label>
                         </div>
-                        <a href="#" className="text-primary">Forgot password</a>
+                        <Link href="#" className="text-primary">Forgot password</Link>
                     </div>
                     <div className="mt-5">
                         <button type="submit"
@@ -51,9 +51,9 @@ const loginPage = () => {
                         className="w-1/2 mx-auto py-2 flex justify-center text-sm border items-center gap-3"><FcGoogle className='text-xl' /> Continue with google</Link>
                 </div>
 
-                <p className="mt-6 text-center text-gray-600">Dont have account? <a href="register.html"
+                <p className="mt-6 text-center text-gray-600">Dont have account? <Link href="/register"
                     className="text-primary">Register
-                    now</a></p>
+                    now</Link></p>
             </div>
         </div>
     );
