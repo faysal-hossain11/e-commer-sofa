@@ -13,7 +13,7 @@ const Header = () => {
         <>
             <header class="py-4 shadow-sm bg-white">
                 <div class="container mx-auto flex items-center justify-between">
-                    <Link href="index.html">
+                    <Link href="/">
                         <Image src={Logo} alt="Logo" class="w-20" />
                     </Link >
 
