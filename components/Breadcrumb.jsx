@@ -5,14 +5,14 @@ import { LuChevronRightSquare } from "react-icons/lu";
 
 const Breadcrumb = () => {
     return (
-        <div class="container mx-auto py-4 flex items-center gap-3">
-            <Link href="/" class="text-primary text-base">
+        <div className="container mx-auto py-4 flex items-center gap-3">
+            <Link href="/" className="text-primary text-base">
                 <FaHouseDamage />
             </Link>
-            <span class=" text-gray-600">
+            <span className=" text-gray-600">
                 <LuChevronRightSquare />
             </span>
-            <p class="text-gray-600 font-medium">Account</p>
+            <p className="text-gray-600 font-medium">Account</p>
         </div>
     );
 };

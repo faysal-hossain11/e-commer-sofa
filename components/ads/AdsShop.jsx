@@ -5,9 +5,9 @@ import AdsImage from '@/app/assets/images/offer.jpg';
 
 const AdsShop = () => {
     return (
-        <div class="container mx-auto pb-16">
+        <div className="container mx-auto pb-16">
             <Link href="#">
-                <Image src={AdsImage} alt="ads" class="w-full" />
+                <Image src={AdsImage} alt="ads" className="w-full" />
             </Link>
         </div>
     );
