@@ -9,7 +9,7 @@ import { signIn } from 'next-auth/react';
 const SocialLogin = () => {
 
     const handleAuth = (event) => {
-        signIn("google", {callbackUrl: 'http://localhost:3000'})
+        signIn("google", { callbackUrl: 'http://localhost:3000' })
     }
 
     return (
@@ -19,11 +19,8 @@ const SocialLogin = () => {
                 <div className="absolute left-0 top-3 w-full border-b-2 border-gray-200"></div>
             </div>
             <div className="mt-6 flex justify-center gap-4 text-center">
-                {/* <Link href="#"
-                    className="w-1/2 mx-auto py-2 flex justify-center border items-center gap-3"><FaFacebook className='text-blue-500 text-xl' />Continue with facebook</Link> */}
-                <button onClick={handleAuth} className="w-full mx-auto py-2 flex justify-center text-sm border items-center gap-3"><FcGoogle className='text-xl' /> Continue with google</button>
+                <button onClick={handleAuth} className="w-full mx-auto py-2 shadow-md bg-gray-200 flex justify-center text-[18px] border items-center gap-3"><FcGoogle className='text-2xl' /> Continue with google</button>
             </div>
-
         </>
     );
 };

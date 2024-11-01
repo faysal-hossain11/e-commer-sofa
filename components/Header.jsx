@@ -8,7 +8,11 @@ import Categorys from './Categorys';
 import { FaRegHeart } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { BiSolidCategory } from "react-icons/bi";
-const Header = () => {
+import { auth } from '@/auth';
+const Header = async () => {
+
+    const session = await auth();
+
     return (
         <>
             <header className="py-4 shadow-sm bg-white">
@@ -45,9 +49,25 @@ const Header = () => {
                                 className="absolute -right-3 -top-3 w-4 h-4 rounded-full flex items-center justify-center bg-primary text-white text-[13px]">
                                 2</div>
                         </Link >
-                        <Link href="/login" className="text-center font-semibold text-white bg-primary hover:bg-black py-[10px] px-5 rounded transition-all duration-300 relative">
-                            Login
-                        </Link >
+
+                        {
+                            session ? (
+                                <button>
+                                    <Image 
+                                    src={session?.user?.image} 
+                                    width={42} 
+                                    height={42}  
+                                    alt='auth avatar' 
+                                    className='rounded-full '
+                                />
+                                </button>
+                            ) : (
+                                <Link href="/login" className="text-center font-semibold text-white bg-primary hover:bg-black py-[10px] px-5 rounded transition-all duration-300 relative">
+                                Login
+                            </Link >          
+                            )
+                        }
+                      
                     </div>
                 </div>
             </header>

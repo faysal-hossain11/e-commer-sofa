@@ -1,8 +1,7 @@
-import SocialLogin from '@/components/SocialLogin';
+
+import SocialLogin from '@/components/auth/SocialLogin';
 import Link from 'next/link';
 import React from 'react';
-import { FaFacebook } from 'react-icons/fa';
-import { FcGoogle } from 'react-icons/fc';
 
 const registerPage = () => {
     return (

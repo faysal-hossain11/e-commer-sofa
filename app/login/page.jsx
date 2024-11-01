@@ -3,7 +3,7 @@ import React from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import Link from 'next/link';
-import SocialLogin from '@/components/SocialLogin';
+import SocialLogin from '@/components/auth/SocialLogin';
 const loginPage = () => {
     return (
         <div className="contain mx-auto py-16">
@@ -44,8 +44,7 @@ const loginPage = () => {
                 <SocialLogin />
 
                 <p className="mt-6 text-center text-gray-600">Dont have account? <Link href="/register"
-                    className="text-primary">Register
-                    now</Link></p>
+                    className="text-primary">Register now</Link></p>
             </div>
         </div>
     );
