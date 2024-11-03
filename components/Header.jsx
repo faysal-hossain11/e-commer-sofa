@@ -9,6 +9,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { BiSolidCategory } from "react-icons/bi";
 import { auth } from '@/auth';
+import Logout from './auth/Logout';
 const Header = async () => {
 
     const session = await auth();
@@ -67,6 +68,7 @@ const Header = async () => {
                             </Link >          
                             )
                         }
+                        <Logout />
                       
                     </div>
                 </div>
