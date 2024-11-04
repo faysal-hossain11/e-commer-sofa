@@ -1,7 +1,11 @@
-import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import NextAuth from "next-auth";
+import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import GoogleProvider from "next-auth/providers/google";
 import mongoClientPromise from "./database/mongoClientPromise";
+import CredentialsProvider from "next-auth/providers/credentials"
+import bcrypt from "bcryptjs";
+import { userModel } from "./models/user-model";
+
 
 
 export const {
@@ -11,7 +15,44 @@ export const {
     signOut,
 } = NextAuth({
     adapter: MongoDBAdapter(mongoClientPromise),
+
     providers:[
+
+        CredentialsProvider({
+            credentials: {
+                email: {  },
+                password: {  }
+            },
+
+            async authorize(credentials) {
+                if(credentials == null) return null;
+
+                try{
+                    const user = await userModel.findOne({email: credentials.email})
+                    // console.log(user);
+                    
+                    if(user){
+                        const isMatch = await bcrypt.compare(
+                            credentials.password,
+                            user.password
+                        );
+                        if(isMatch){
+                            return user
+                        } else{
+                            throw new Error("Email or password mismatch");
+                        }
+                    } else{
+                        throw new Error("User not Found!")
+                    }
+                }catch(error){
+                    throw new Error(error)
+                }
+
+
+                
+            }
+        }),
+
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRECT
