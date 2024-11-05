@@ -12,7 +12,6 @@ if (!process.env.MONGODB_CONNECTION_STRING) {
 
 const uri = process.env.MONGODB_CONNECTION_STRING;
 const options = {};
-
 let client;
 let mongoClientPromise;
 

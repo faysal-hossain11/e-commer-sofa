@@ -4,7 +4,6 @@ import Logo from '@/app/assets/images/logo.jpg';
 import Link from 'next/link';
 import { FaSearch } from "react-icons/fa";
 import Categorys from './Categorys';
-
 import { FaRegHeart } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { BiSolidCategory } from "react-icons/bi";

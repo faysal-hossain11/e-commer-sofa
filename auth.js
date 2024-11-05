@@ -6,8 +6,6 @@ import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from "bcryptjs";
 import { userModel } from "./models/user-model";
 
-
-
 export const {
     handlers: { GET, POST },
     auth,
@@ -15,7 +13,6 @@ export const {
     signOut,
 } = NextAuth({
     adapter: MongoDBAdapter(mongoClientPromise),
-
     providers:[
 
         CredentialsProvider({
