@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <div className="bg-cover bg-no-repeat bg-center py-36 bg-[url('assets/images/banner-bg.jpg')]" >
         <div className="container mx-auto">
-          <h1 className="text-6xl text-gray-800 font-medium mb-4 capitalize">
+          <h1 className="text-6xl text-gray-800 font-semibold mb-4 capitalize">
             best collection for <br /> home decoration
           </h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam <br />

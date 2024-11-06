@@ -52,23 +52,32 @@ const Header = async () => {
 
                         {
                             session ? (
-                                <button>
-                                    <Image 
-                                    src={session?.user?.image} 
-                                    width={42} 
-                                    height={42}  
-                                    alt='auth avatar' 
-                                    className='rounded-full '
-                                />
-                                </button>
+                                <div>
+                                    {
+                                        session?.user?.image ? (
+                                            <button>
+                                                <Image
+                                                    src={session?.user?.image}
+                                                    width={42}
+                                                    height={42}
+                                                    alt='auth avatar'
+                                                    className='rounded-full '
+                                                />
+
+                                            </button>
+                                        ) : (
+                                            <h2>{session?.user?.name}</h2>
+                                        )
+                                    }
+                                </div>
                             ) : (
                                 <Link href="/login" className="text-center font-semibold text-white bg-primary hover:bg-black py-[10px] px-5 rounded transition-all duration-300 relative">
-                                Login
-                            </Link >          
+                                    Login
+                                </Link >
                             )
                         }
                         <Logout />
-                      
+
                     </div>
                 </div>
             </header>
