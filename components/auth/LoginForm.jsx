@@ -27,10 +27,10 @@ const LoginForm = () => {
             })
 
 
-            if(response.error) {
-                setError(response.error);
-            } else{
+            if(!response.error) {
                 router.push("/");
+            } else{
+                setError(response.error);
             }
         } catch(err){
             setError(err.message)

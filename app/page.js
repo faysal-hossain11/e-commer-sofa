@@ -14,6 +14,7 @@ import Product2 from '@/app/assets/images/products/product2.jpg';
 import Product3 from '@/app/assets/images/products/product3.jpg';
 import Product4 from '@/app/assets/images/products/product4.jpg';
 
+
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
@@ -64,6 +65,7 @@ export default function Home() {
         </div>
       </div>
       {/* end the features card  */}
+
 
       {/* start the category card */}
       <div className="container mx-auto py-16">
