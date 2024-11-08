@@ -24,8 +24,7 @@ const productDetailsPage = () => {
                 <div>
                     <Image src={Product1} alt="product" className="w-full" />
                     <div className="grid grid-cols-5 gap-4 mt-4">
-                        <Image src={Product2} alt="product2"
-                            className="w-full cursor-pointer border border-primary" />
+                        <Image src={Product2} alt="product2" className="w-full cursor-pointer border border-primary" />
                         <Image src={Product3} alt="product2" className="w-full cursor-pointer border" />
                         <Image src={Product4} alt="product2" className="w-full cursor-pointer border" />
                         <Image src={Product5} alt="product2" className="w-full cursor-pointer border" />
