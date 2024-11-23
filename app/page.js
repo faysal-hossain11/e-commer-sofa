@@ -20,7 +20,18 @@ import { FaRegEye } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
 import AdsShop from "@/components/ads/AdsShop";
-export default function Home() {
+import ProductCard from "@/components/ProductCard";
+import { findAllProducts } from "@/database/queries";
+
+
+
+export default async function Home() {
+
+  // const allProducts = await findAllProducts();
+  // console.log(`this is the all product`, allProducts);
+  
+
+
   return (
     <>
       <div className="bg-cover bg-no-repeat bg-center py-36 bg-[url('assets/images/banner-bg.jpg')]" >
@@ -111,7 +122,7 @@ export default function Home() {
       <div className="container mx-auto pb-16">
         <h2 className="text-3xl text-gray-800 uppercase mb-6 font-semibold">top new arrival</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="bg-white shadow rounded overflow-hidden group">
+          {/* <div className="bg-white shadow rounded overflow-hidden group">
             <div className="relative">
               <Image src={Product1} alt="product 1" className="w-full" />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
@@ -153,8 +164,8 @@ export default function Home() {
               <Link href="#"
                 className="w-full py-[10px] text-center text-white bg-primary hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 font-semibold rounded "><FaCartShopping /> Add to cart</Link>
             </div>
-          </div>
-          <div className="bg-white shadow rounded overflow-hidden group">
+          </div> */}
+          {/* <div className="bg-white shadow rounded overflow-hidden group">
             <div className="relative">
               <Image src={Product2} alt="product 1" className="w-full" />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
@@ -196,8 +207,8 @@ export default function Home() {
               <Link href="#"
                 className="w-full py-[10px] text-center text-white bg-primary hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 font-semibold rounded "><FaCartShopping /> Add to cart</Link>
             </div>
-          </div>
-          <div className="bg-white shadow rounded overflow-hidden group">
+          </div> */}
+          {/* <div className="bg-white shadow rounded overflow-hidden group">
             <div className="relative">
               <Image src={Product3} alt="product 1" className="w-full" />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
@@ -239,8 +250,8 @@ export default function Home() {
               <Link href="#"
                 className="w-full py-[10px] text-center text-white bg-primary hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 font-semibold rounded "><FaCartShopping /> Add to cart</Link>
             </div>
-          </div>
-          <div className="bg-white shadow rounded overflow-hidden group">
+          </div> */}
+          {/* <div className="bg-white shadow rounded overflow-hidden group">
             <div className="relative">
               <Image src={Product4} alt="product 1" className="w-full" />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
@@ -282,7 +293,9 @@ export default function Home() {
               <Link href="#"
                 className="w-full py-[10px] text-center text-white bg-primary hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 font-semibold rounded "><FaCartShopping /> Add to cart</Link>
             </div>
-          </div>
+          </div> */}
+
+          <ProductCard />
         </div>
       </div>
       {/* end the new arrival card */}
